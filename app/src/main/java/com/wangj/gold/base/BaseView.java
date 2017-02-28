@@ -11,6 +11,8 @@ package com.wangj.gold.base;
 public interface BaseView {
 
     void showLoading(String title);
+
     void stopLoading();
+
     void showError(String msg);
 }

@@ -112,4 +112,65 @@
     </style>
 	</resources>
 
+## Base封装 ##
+
+>**BaseView**
+
+	public interface BaseView {
+    
+    	void showLoading(String title);
+    
+    	void stopLoading();
+    
+    	void showError(String msg);
+    }
+
+>**BasePresenter**
+
+	public interface BasePresenter<T extends BaseView>{
+
+    /**
+     * 与View层简历关联
+     * @param view
+     */
+    void attachView(T view);
+
+    /**
+     * 解除关联
+     */
+    void detachView();
+	}
+
+>**RxPresenter**  
+>配rxjava的时候在生命周期的某个时刻取消订阅，一个很常见的模式就是使用CompsiteSubscription来持有所有的Subscriptions,然后在onDestroy()或者在onDestoryView()取消所有的订阅。
+
+	public class RxPresenter<T extends BaseView> implements BasePresenter<T> {
+
+    protected T mView;
+    protected CompositeSubscription mCompositeSubscription;
+
+    protected void unSubscribe() {
+        if (mCompositeSubscription != null) {
+            mCompositeSubscription.unsubscribe();
+        }
+    }
+
+    protected void addSubscribe(Subscription subscription) {
+        if (mCompositeSubscription == null) {
+            mCompositeSubscription = new CompositeSubscription();
+        }
+        mCompositeSubscription.add(subscription);
+    }
+
+    @Override
+    public void attachView(T view) {
+        this.mView = view;
+    }
+
+    @Override
+    public void detachView() {
+        this.mView = null;
+        unSubscribe();
+    }
+	}
 
