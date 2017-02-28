@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppTheme" parent="BaseTheme">
+        <item name="android:windowTranslucentStatus">true</item>
+    </style>
+
+    <!--透明状态栏-->
+    <style name="AppTheme.TranslucentStatus"/>
+
+    <style name="AppTheme.Splash">
+        <item name="android:windowBackground">@mipmap/img_splash_bg</item>
+    </style>
+
+    <!--白色  相关设置界面-->
+    <style name="AppTheme.White">
+        <item name="android:windowTranslucentStatus">false</item>
+    </style>
+</resources>

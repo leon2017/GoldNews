@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base application theme. -->
+    <style name="BaseTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorButtonNormal">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme" parent="BaseTheme"/>
+
+    <!--透明状态栏-->
+    <style name="AppTheme.TranslucentStatus"/>
+
+    <!--splash页面  防止启动白屏-->
+    <style name="AppTheme.Splash">
+        <item name="android:windowBackground">@mipmap/img_splash_bg</item>
+    </style>
+
+    <style name="AppTheme.PopupOverlay.White" parent="ThemeOverlay.AppCompat.Dark" />
+    <style name="AppTheme.AppBarOverlay.White" parent="ThemeOverlay.AppCompat.Light" />
+
+    <!--白色(设置相关页面)-->
+    <style name="AppTheme.White"/>
+
+
+</resources>
