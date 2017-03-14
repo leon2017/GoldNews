@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tabs>
+    <tab
+        id="@+id/navigation_home"
+        icon="@drawable/tab_ic_home"
+        title="@string/tab_home" />
+    <tab
+        id="@+id/navigation_find"
+        icon="@drawable/tab_ic_search"
+        title="@string/tab_find" />
+    <tab
+        id="@+id/navigation_notic"
+        icon="@drawable/tab_ic_notifications"
+        title="@string/tab_notic" />
+
+    <tab
+        id="@+id/navigation_my"
+        icon="@drawable/tab_ic_person"
+        title="@string/tab_my" />
+</tabs>
