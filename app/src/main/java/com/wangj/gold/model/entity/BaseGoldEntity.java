@@ -1,4 +1,4 @@
-package com.wangj.gold.entity;
+package com.wangj.gold.model.entity;
 
 import com.google.gson.annotations.SerializedName;
 

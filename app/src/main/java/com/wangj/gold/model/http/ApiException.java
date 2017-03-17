@@ -1,4 +1,4 @@
-package com.wangj.gold.http;
+package com.wangj.gold.model.http;
 
 /**
  * 当前类注释：自定义异常

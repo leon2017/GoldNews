@@ -11,7 +11,7 @@ package com.wangj.gold.base;
 public interface BasePresenter<T extends BaseView>{
 
     /**
-     * 与View层简历关联
+     * 与View层建立关联
      * @param view
      */
     void attachView(T view);

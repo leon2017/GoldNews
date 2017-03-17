@@ -1,8 +1,8 @@
-package com.wangj.gold.http;
+package com.wangj.gold.model.http;
 
 import com.orhanobut.logger.Logger;
 import com.trello.rxlifecycle.LifecycleTransformer;
-import com.wangj.gold.entity.BaseGoldEntity;
+import com.wangj.gold.model.entity.BaseGoldEntity;
 
 import rx.Observable;
 import rx.functions.Func1;
